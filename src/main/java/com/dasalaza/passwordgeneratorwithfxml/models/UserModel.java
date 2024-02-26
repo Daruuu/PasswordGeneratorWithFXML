@@ -1,4 +1,4 @@
-package com.dasalaza.passwordgeneratorwithfxml;
+package com.dasalaza.passwordgeneratorwithfxml.models;
 
 import javafx.scene.control.Alert;
 
