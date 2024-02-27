@@ -6,12 +6,15 @@ public class UserModel {
 
     private String name;
     private String surname;
+    private String number;
 
     public UserModel() {
     }
-    public UserModel(String name, String surname) {
+
+    public UserModel(String name, String surname, String number) {
         this.name = name;
         this.surname = surname;
+        this.number = number;
     }
 
     public String getName() {
@@ -30,6 +33,13 @@ public class UserModel {
         this.surname = surname;
     }
 
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
 //    Los 8 dígitos del DNI se generarán a partir de:
 
@@ -47,7 +57,7 @@ public class UserModel {
         if (getName().isEmpty() || getName().isBlank())
             showTypeErrorInput("Length NAME is null", "Introduce data in this field!");
         else if (getName().length() < 5)
-            showTypeErrorInput("Length NAME is short", "Introduce a name of 5 letters!");
+            showTypeErrorInput("Length NAME is short", "Introduce a name of minim of 5 letters!");
         else if (getName().length() == 5)
         {
 
@@ -69,24 +79,36 @@ public class UserModel {
 
     private boolean checkValidString(String str){
         int i = 0;
-/*
-        while (str.charAt(i))
+        while (i < str.length())
         {
-            if (getName().matches("^[a-zA-Z]+$"))
-            {
+            if (str.matches("^[a-zA-Z]+$"))
                 return (true);
-                break;
-            }
+            i++;
         }
-*/
         return (false);
     }
 
     /*
     3-Multiplicador:
-   Una vez obtenidos los 7 números se multiplicará por un número comprendido entre el 1 y el 9 (la app debe controlar que el usuario no introduzca un valor superior). El resultado obtenido nos dará los 8 dígitos de la parte nº del DNI.
+    Una vez obtenidos los 7 números se multiplicará por un número
+    comprendido entre el 1 y el 9
+    (la app debe controlar que el usuario no introduzca un valor superior).
+    El resultado obtenido nos dará los 8 dígitos de la parte nº del DNI.
      */
+    private boolean checkNumberValid(){
+        return getNumber().matches("[0-9]{1}");
+    }
+
     private void checkFirstNumberDniValid(){
 
     }
+
+
+    // comprobar que todos los campos no sean nulos
+    private boolean checkAllInputNotEmpty(){
+        return getName().isEmpty() || getSurname().isEmpty() || getNumber().isBlank();
+    }
+
+
+
 }

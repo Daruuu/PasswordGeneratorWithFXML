@@ -11,7 +11,7 @@ public class UserController {
     @FXML
     public TextField surnameInput;
     @FXML
-    public TextField dniGenerated;
+    public TextField numberInput;
     @FXML
     private Label welcomeText;
 
@@ -19,7 +19,5 @@ public class UserController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
-
-
 
 }

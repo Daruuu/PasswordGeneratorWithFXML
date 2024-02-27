@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44afe2de-38ba-413b-b2b4-5b7b1b4da20b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/FormularyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/views/formularyMainView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/views/formularyMainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/views/formularyMainView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/dasalaza/passwordgeneratorwithfxml/userData-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/dasalaza/passwordgeneratorwithfxml/userData-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +95,7 @@
       <updated>1708968958164</updated>
       <workItem from="1708968959195" duration="3583000" />
       <workItem from="1708975269128" duration="3874000" />
-      <workItem from="1708979161090" duration="6352000" />
+      <workItem from="1708979161090" duration="12137000" />
     </task>
     <servers />
   </component>
