@@ -42,9 +42,8 @@ public class UserModel {
     }
 
 //    Los 8 dígitos del DNI se generarán a partir de:
-
     /*
-    1-Las 7 primeras letras del nombre y los apellidos.
+    1- Las 7 primeras letras del nombre y los apellidos.
     (Ejemplo:
     */
     private void    manageInputData(){
@@ -53,14 +52,15 @@ public class UserModel {
 
     // Si el nombre ocupa 5 letras,
     // se utilizan las 5 letras del nombre y las 2 primeras del apellido.
-    private void    checkLengthName(){
+    private void    checkLengthString(){
         if (getName().isEmpty() || getName().isBlank())
             showTypeErrorInput("Length NAME is null", "Introduce data in this field!");
         else if (getName().length() < 5)
             showTypeErrorInput("Length NAME is short", "Introduce a name of minim of 5 letters!");
         else if (getName().length() == 5)
         {
-
+            String getTwoCharactersSurname = getSurname().substring(0,2);
+            String concatNameAndSurname = getName().concat(getTwoCharactersSurname);
         }
         else if (getName().length() > 7)
         {
@@ -95,7 +95,7 @@ public class UserModel {
     (la app debe controlar que el usuario no introduzca un valor superior).
     El resultado obtenido nos dará los 8 dígitos de la parte nº del DNI.
      */
-    private boolean checkNumberValid(){
+    private boolean checkNumberIsValid(){
         return getNumber().matches("[0-9]{1}");
     }
 
@@ -103,12 +103,9 @@ public class UserModel {
 
     }
 
-
     // comprobar que todos los campos no sean nulos
     private boolean checkAllInputNotEmpty(){
         return getName().isEmpty() || getSurname().isEmpty() || getNumber().isBlank();
     }
-
-
 
 }
