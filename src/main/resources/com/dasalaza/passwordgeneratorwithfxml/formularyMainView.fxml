@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dasalaza.passwordgeneratorwithfxml.controllers.FormularyController">
+    <children>
+        <SplitPane dividerPositions="0.8132183908045977" layoutX="50.0" layoutY="25.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="500.0">
+            <items>
+                <AnchorPane prefHeight="200.0" prefWidth="550.0">
+                   <children>
+                       <fx:include fx:id="fieldsUser" source="userDataView.fxml" />
+                  <Label layoutX="282.0" layoutY="52.0" prefHeight="23.0" prefWidth="115.0" text="DNI Generated" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="newDniGenerated" layoutX="282.0" layoutY="83.0" />
+                   </children>
+                </AnchorPane>
+                <AnchorPane SplitPane.resizableWithParent="false">
+                    <children>
+                        <Button fx:id="buttonGenerateDni" layoutX="306.0" layoutY="16.0" mnemonicParsing="false" onAction="#buttonActionGenerateDni" text="Generate DNI" textAlignment="JUSTIFY">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonResetFields" layoutX="116.0" layoutY="16.0" mnemonicParsing="false" onAction="#buttonResetFieldsFormulary" text="Reset Fields" textAlignment="JUSTIFY">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

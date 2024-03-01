@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="280.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dasalaza.passwordgeneratorwithfxml.controllers.UserDataController">
+    <children>
+        <Text layoutX="86.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="JUSTIFY"
+              wrappingWidth="70.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Text>
+        <Text layoutX="86.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname"
+              textAlignment="JUSTIFY" wrappingWidth="70.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Text>
+        <Text layoutX="86.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiplicator"
+              textAlignment="JUSTIFY" wrappingWidth="100.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="nameInput" layoutX="86.0" layoutY="84.0"/>
+        <TextField fx:id="surnameInput" layoutX="86.0" layoutY="153.0"/>
+        <TextField fx:id="numberInput" layoutX="86.0" layoutY="215.0"/>
+    </children>
+</AnchorPane>

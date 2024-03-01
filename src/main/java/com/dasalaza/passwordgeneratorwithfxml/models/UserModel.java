@@ -1,5 +1,6 @@
 package com.dasalaza.passwordgeneratorwithfxml.models;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 
 public class UserModel {
@@ -95,17 +96,18 @@ public class UserModel {
     (la app debe controlar que el usuario no introduzca un valor superior).
     El resultado obtenido nos dará los 8 dígitos de la parte nº del DNI.
      */
-    private boolean checkNumberIsValid(){
-        return getNumber().matches("[0-9]{1}");
-    }
 
-    private void checkFirstNumberDniValid(){
+    private void    checkFirstNumberDniValid(){
 
     }
 
     // comprobar que todos los campos no sean nulos
     private boolean checkAllInputNotEmpty(){
         return getName().isEmpty() || getSurname().isEmpty() || getNumber().isBlank();
+    }
+
+    @FXML
+    public void    resetFieldsUser(){
     }
 
 }

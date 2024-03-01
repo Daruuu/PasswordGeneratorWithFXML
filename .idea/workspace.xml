@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="44afe2de-38ba-413b-b2b4-5b7b1b4da20b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/DniGeneratorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/DniGeneratorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/FormularyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/FormularyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/controllers/UserDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasalaza/passwordgeneratorwithfxml/views/formularyMainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/dasalaza/passwordgeneratorwithfxml/formularyMainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/dasalaza/passwordgeneratorwithfxml/userData-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/dasalaza/passwordgeneratorwithfxml/userDataView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +67,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\theda\IdeaProjects\PasswordGeneratorWithFXML\src\main\resources\com\dasalaza\passwordgeneratorwithfxml" />
+      <recent name="C:\Users\theda\IdeaProjects\PasswordGeneratorWithFXML\src\main\java\com\dasalaza\passwordgeneratorwithfxml\views" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="DniGeneratorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dasalaza.passwordgeneratorwithfxml.DniGeneratorApplication" />
@@ -93,7 +104,10 @@
       <workItem from="1708968959195" duration="3583000" />
       <workItem from="1708975269128" duration="3874000" />
       <workItem from="1708979161090" duration="12137000" />
-      <workItem from="1709128699586" duration="5493000" />
+      <workItem from="1709128699586" duration="29419000" />
+      <workItem from="1709223506013" duration="679000" />
+      <workItem from="1709228127941" duration="7026000" />
+      <workItem from="1709238895413" duration="11864000" />
     </task>
     <servers />
   </component>
