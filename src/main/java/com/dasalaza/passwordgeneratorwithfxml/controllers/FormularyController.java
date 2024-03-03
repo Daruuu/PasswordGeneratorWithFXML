@@ -17,25 +17,18 @@ public class FormularyController {
 
     public UserDataController fieldsUserController = new UserDataController();
 
-//    public void handleInputData() {
-//        fieldsUserController.checkInputFieldsNotNull();
-//    }
-
     @FXML
     public void    buttonResetFieldsFormulary(){
         fieldsUserController.resetUserFields();
-        System.out.println(fieldsUserController.getNameInput());
-        System.out.println(fieldsUserController.getSurnameInput());
-        System.out.println(fieldsUserController.getNumberInput());
     }
     @FXML
     public void buttonActionGenerateDni(){
-        fieldsUserController.checkInputFieldsNotNull();
-        fieldsUserController.checkValidFields();
-        // ALGORITMO PAR AGENERA EL DNI
+        boolean fieldsNotNull = fieldsUserController.checkInputFieldsNotNull();
+        boolean validFields = fieldsUserController.checkValidFields();
 
-        System.out.println(fieldsUserController.getNameInput());
-        System.out.println(fieldsUserController.getSurnameInput());
-        System.out.println(fieldsUserController.getNumberInput());
+        if (fieldsNotNull && validFields) {
+            String dni = fieldsUserController.generateDNI();
+            newDniGenerated.setText(dni);
+        }
     }
 }

@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
+
 public class UserDataController {
 
     @FXML
@@ -12,7 +13,6 @@ public class UserDataController {
     public TextField surnameInput;
     @FXML
     public TextField numberInput;
-    TextField empty = new TextField("");
 
     public UserDataController() {
         this.setNameInput(nameInput);
@@ -51,24 +51,35 @@ public class UserDataController {
         numberInput.clear();
     }
 
-    public void checkInputFieldsNotNull() {
-        if (getNameInput().isEmpty() || getNameInput().isBlank())
+    public boolean checkInputFieldsNotNull() {
+        if (getNameInput().isEmpty() || getNameInput().isBlank()) {
             showTypeErrorInput("Introduce correct value in Name!");
-        else if (getSurnameInput().isEmpty() || getSurnameInput().isBlank())
+            return false;
+        } else if (getSurnameInput().isEmpty() || getSurnameInput().isBlank()) {
             showTypeErrorInput("Introduce correct value in Surname!");
-        else if (getNumberInput().isBlank() || getNumberInput().isBlank())
+            return false;
+        } else if (getNumberInput().isBlank() || getNumberInput().isBlank()) {
             showTypeErrorInput("Introduce correct value in Number!");
-        else if (getNameInput().length() < 5)
-            showTypeErrorInput("Introduce at least 5 characters!");
+            return false;
+        } else if (getNameInput().length() < 3) {
+            showTypeErrorInput("Introduce at least 3 characters!");
+            return false;
+        }
+        return true;
     }
 
-    public void checkValidFields() {
-        if (!checkValidString(getNameInput()))
+    public boolean checkValidFields() {
+        if (!checkValidString(getNameInput())) {
             showTypeErrorInput("Introduce only alphabetic characters in NAME!");
-        else if (!checkValidString(getSurnameInput()))
+            return false;
+        } else if (!checkValidString(getSurnameInput())) {
             showTypeErrorInput("Introduce only alphabetic characters in SURNAME!");
-        else if (!checkNumberInputIsValid())
+            return false;
+        } else if (!checkNumberInputIsValid()) {
             showTypeErrorInput("Introduce only numbers 0-9!");
+            return false;
+        }
+        return true;
     }
 
     private void showTypeErrorInput(String message) {
@@ -88,69 +99,51 @@ public class UserDataController {
         }
         return (false);
     }
-    private boolean checkNumberInputIsValid(){
+
+    private boolean checkNumberInputIsValid() {
         return getNumberInput().matches("[0-9]{1}");
     }
 
-    public String generateDNI()
-    {
+    public String generateDNI() {
         String letters = getSevenLetters();
-        int[] lettersPositions = getAlphabetPositions(letters);
-        int[] dniSevenDigits = getSevenNumbersDNI(lettersPositions);
+        String dniSevenDigits = getSevenNumbersDNI(letters);
         String dniEigthDigits = getEightNumbersDNI(dniSevenDigits);
         int dniNumber = Integer.parseInt(dniEigthDigits);
-        String alfabetoMinisterioInterior = "TRWAGMYFPDXBNJZSQVHLCKE";
-        char letraDni = alfabetoMinisterioInterior.charAt(dniNumber%23);
-        String dniFinal = dniEigthDigits.concat(String.valueOf(letraDni));
-        return dniFinal;
+        String alphabet = "TRWAGMYFPDXBNJZSQVHLCKE";
+        char dniLetter = alphabet.charAt(dniNumber % 23);
+        return dniEigthDigits.concat(String.valueOf(dniLetter));
     }
 
-    private String getSevenLetters(){
-       String name = getNameInput();
-       String surname = getSurnameInput();
-       String result = new String(new char[7]);
+    private String getSevenLetters() {
+        String name = getNameInput();
+        String surname = getSurnameInput();
+        String result = new String(new char[7]);
 
-       if (name.length() < 7)
-       {
-           result = name;
-           int numeroLetrasFaltantes = 7 - result.length();
-           String parteRestante = surname.substring(0,numeroLetrasFaltantes);
-           result.concat(parteRestante);
-       }
-       else if (name.length() >= 7)
-           result = name.substring(0, 7);
+        if (name.length() < 7) {
+            result = name;
+            int numeroLetrasFaltantes = 7 - result.length();
+            String parteRestante = surname.substring(0, numeroLetrasFaltantes);
+            result.concat(parteRestante);
+        } else if (name.length() >= 7)
+            result = name.substring(0, 7);
         return result;
     }
 
-    private int[] getAlphabetPositions(String s)
-    {
-        int[] sevenLettersPositions = new int[7];
-        for (int i = 0; i < s.length(); ++i) {
-            sevenLettersPositions[i] = s.charAt(i) - 'a';
+    private String getSevenNumbersDNI(String s) {
+        StringBuilder dniNumber = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            int position = s.charAt(i) - 'a';
+            dniNumber.append(position % 10);
         }
-        return sevenLettersPositions;
-    }
-
-    private int[] getSevenNumbersDNI(int[] sevenLettersPositions) {
-        int[] dniNumber = new int[sevenLettersPositions.length];
-        for (int i = 0; i < sevenLettersPositions.length; i++) {
-            dniNumber[i] = sevenLettersPositions[i] % 10;
-        }
-        return dniNumber;
+        return dniNumber.toString();
     }
 
     // Calculo octavo numero del dni.
-    private String getEightNumbersDNI(int[] dni) {
-        int dniNumber = 0;
-
-        for (int i = dni.length-1; i > 0; i++) {
-            dniNumber += (int) (dni[i] * Math.pow(10, i));
-        }
+    private String getEightNumbersDNI(String dniSevenNumbers) {
+        int dniNumber = Integer.parseInt(dniSevenNumbers);
         int multiplier = Integer.parseInt(getNumberInput());
         dniNumber = dniNumber * multiplier;
-
-        String dniEigthDigits = String.valueOf(dniNumber);
-        return dniEigthDigits;
+        return String.valueOf(dniNumber);
     }
 }
 
